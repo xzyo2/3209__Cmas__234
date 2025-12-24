@@ -1,0 +1,21 @@
+/* PC */
+@media (min-width: 1024px) {
+    #timer { font-size: 8rem; }
+    .circle-img { width: 200px; height: 200px; }
+    h2 { font-size: 3rem; }
+}
+
+/* Tablets */
+@media (max-width: 1023px) {
+    #timer { font-size: 15vw; }
+    .circle-img { width: 150px; height: 150px; }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    #timer { font-size: 18vw; }
+    #timer-placeholder { font-size: 1rem; padding: 0 20px; text-align: center; }
+    .circle-img { width: 100px; height: 100px; }
+    h2 { font-size: 1.8rem; text-align: center; padding: 0 10px; }
+    #button-group { flex-direction: column; }
+}

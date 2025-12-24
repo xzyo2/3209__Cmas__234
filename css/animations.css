@@ -1,0 +1,43 @@
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px) rotate(-5deg); }
+    50% { transform: translateX(10px) rotate(5deg); }
+    75% { transform: translateX(-10px) rotate(-5deg); }
+    100% { transform: translateX(0); }
+}
+.shake-anim { animation: shake 0.4s ease-in-out; }
+
+/* SOLUTION 1: Fly completely OFF SCREEN */
+/* Img 1: Top Left Exit */
+@keyframes fly1 {
+    0% { top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -50%) scale(0); }
+    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    80% { opacity: 1; }
+    100% { top: -20%; left: -20%; transform: rotate(-45deg); opacity: 0; }
+}
+
+/* Img 2: Top Right Exit */
+@keyframes fly2 {
+    0% { top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -50%) scale(0); }
+    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    80% { opacity: 1; }
+    100% { top: -20%; left: 120%; transform: rotate(45deg); opacity: 0; }
+}
+
+/* Img 3: Bottom Center Exit */
+@keyframes fly3 {
+    0% { top: 50%; left: 50%; opacity: 0; transform: translate(-50%, -50%) scale(0); }
+    10% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    80% { opacity: 1; }
+    100% { top: 120%; left: 50%; transform: rotate(180deg); opacity: 0; }
+}
+
+.flying-mode #img1 { animation: fly1 4s forwards ease-in-out; }
+.flying-mode #img2 { animation: fly2 4s forwards ease-in-out; }
+.flying-mode #img3 { animation: fly3 4s forwards ease-in-out; }

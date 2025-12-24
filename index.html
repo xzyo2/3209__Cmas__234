@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Christmas</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <div id="snow-container"></div>
+
+    <div id="countdown-section" class="scene active">
+        <h1 id="timer">00:00:00</h1>
+        <div id="bottom-text-container">
+            <p id="timer-placeholder" class="fade-text">Waiting for the moment...</p>
+        </div>
+    </div>
+
+    <div id="story-section" class="scene hidden">
+        
+        <div id="letter-frame" class="hidden"></div>
+        
+        <button id="toggle-stickers" class="hidden">Hide Stickers</button>
+
+        <div id="image-stage">
+            <img src="img/1.jpg" class="circle-img hidden" id="img1" draggable="false">
+            <img src="img/2.jpg" class="circle-img hidden" id="img2" draggable="false">
+            <img src="img/3.jpg" class="circle-img hidden" id="img3" draggable="false">
+        </div>
+
+        <div class="content-wrapper">
+            <h2 id="main-text">Merry Christmas!</h2>
+            
+            <div id="button-group" class="hidden">
+                <button id="btn-yes" class="theme-btn">Yes</button>
+                <button id="btn-no" class="theme-btn">No</button>
+            </div>
+        </div>
+        
+        <div id="click-overlay" class="hidden"></div>
+    </div>
+
+    <audio id="audio-bells" src="sounds/bells.mp3"></audio>
+    <audio id="audio-santa" src="sounds/santa.mp3"></audio>
+    <audio id="audio-bad" src="sounds/bad.mp3"></audio>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
